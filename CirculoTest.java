@@ -23,4 +23,9 @@ public class CirculoTest {
         Circulo c = new Circulo(1.0);
         assertEquals(Math.PI, c.calcularArea(), 0.0);
     }
+    @Test
+    public void testCalcularPerimetro() {
+        Circulo c = new Circulo(2.0);
+        assertEquals(4 * Math.PI, c.calcularPerimetro(), 0.01);
+    }
 }
