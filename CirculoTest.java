@@ -28,4 +28,9 @@ public class CirculoTest {
         Circulo c = new Circulo(2.0);
         assertEquals(4 * Math.PI, c.calcularPerimetro(), 0.01);
     }
+    @Test
+    public void testMostrarRadio() {
+        Circulo c = new Circulo(4.0);
+        assertEquals("El radio del círculo es: 4.0", c.mostrarRadio());
+    }
 }
