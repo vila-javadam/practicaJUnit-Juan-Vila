@@ -33,4 +33,10 @@ public class CirculoTest {
         Circulo c = new Circulo(4.0);
         assertEquals("El radio del círculo es: 4.0", c.mostrarRadio());
     }
+    @Test
+    public void testMayorCirculo() {
+        Circulo c1 = new Circulo(3.0);
+        Circulo c2 = new Circulo(8.0);
+        assertEquals(c2, Circulo.mayorCirculo(c1, c2));
+    }
 }
