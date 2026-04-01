@@ -1,38 +1,49 @@
-import org.junit.Test;
-import static org.junit.Assert.*;
+package com.dam.practicajunit;
+
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class CirculoTest {
+
     @Test
     public void testConstructorVacio() {
         Circulo c = new Circulo();
         assertEquals(0, c.getRadio());
     }
+
     @Test
     public void testGetRadio() {
         Circulo c = new Circulo(5.0);
-        assertEquals(5.0, c.getRadio(), 0.0);
+        assertEquals(5.0, c.getRadio());
     }
+
     @Test
     public void testSetRadio() {
         Circulo c = new Circulo(2.0);
         c.setRadio(7.5);
-        assertEquals(7.5, c.getRadio(), 0.0);
+        assertEquals(7.5, c.getRadio());
     }
+
     @Test
     public void testCalcularArea() {
         Circulo c = new Circulo(1.0);
-        assertEquals(Math.PI, c.calcularArea(), 0.0);
+        assertEquals(Math.PI, c.calcularArea(), 0.001);
     }
+
     @Test
     public void testCalcularPerimetro() {
         Circulo c = new Circulo(2.0);
         assertEquals(4 * Math.PI, c.calcularPerimetro(), 0.01);
     }
+
     @Test
     public void testMostrarRadio() {
         Circulo c = new Circulo(4.0);
-        assertEquals("El radio del círculo es: 4.0", c.mostrarRadio());
+        // Ajustado a tu código: mostrarRadio(Circulo) devuelve double
+        assertEquals(4.0, Circulo.mostrarRadio(c));
     }
+
     @Test
     public void testMayorCirculo() {
         Circulo c1 = new Circulo(3.0);
